@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 ################ # Loading elections 2021 elections data:
 
-data_path = "/Users/elad.sofer/src/Python_Course/task6/"
+data_path = "/Users/moshekagan/repos/personal_teaching/Zohar_Ben_Gurion_University/data/"
 
 # Notice that the  encoding isn't ASCII, since hebrew isn't supported.
 df_2021_raw = pd.read_csv(data_path + 'votes per city 2021.csv',  encoding = 'iso-8859-8', index_col='שם ישוב')
