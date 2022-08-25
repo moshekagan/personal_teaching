@@ -31,7 +31,7 @@ class IsraeliQueue:
                 is_new = False
                 group["sum"] += item.priority
                 group["items"].append(item)
-                group["items"] = list(sorted(group["items"], key=lambda current_item: current_item.priority, reverse=True))
+                # group["items"] = list(sorted(group["items"], key=lambda current_item: current_item.priority, reverse=True))
 
         if is_new:
             new_group = {
@@ -41,10 +41,10 @@ class IsraeliQueue:
             }
             self.queue.append(new_group)
 
-        self.order_queue()
+        # self.order_queue()
 
-    def order_queue(self):
-        self.queue = list(sorted(self.queue, key=lambda g: g["sum"], reverse=True))
+    # def order_queue(self):
+    #     self.queue = list(sorted(self.queue, key=lambda g: g["sum"], reverse=True))
 
     def dequeue_item(self):
         group = self.queue[0]
@@ -53,7 +53,7 @@ class IsraeliQueue:
         group["items"] = self.queue[0]["items"][1:]
         group["sum"] -= item.priority
 
-        self.order_queue()
+        # self.order_queue()
 
         return item
 
